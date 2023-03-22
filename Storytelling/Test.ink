@@ -2,7 +2,10 @@
 A Boring Story
 */
 -> Intro
-
+VAR hunger = 10
+VAR hydration = 1
+VAR energy = 1
+VAR water_supplies = 3
 === Intro ===
 
 You wake up, tired and confused
@@ -41,7 +44,8 @@ You are floating in the middle of an endless abyss
      *Analyse machine
      ->machine
     
-    
+VAR alarm_ringing = false
+
     =machine
     *Wipe the machine surface clean
     ->wipe_machine
@@ -59,6 +63,7 @@ You look away in horror
 =button
 The button starts an alarm, it's deafening.
 You cover your ears
+~ alarm_ringing= true
 ...
 ->machine
 
@@ -90,6 +95,8 @@ TODO voice explains situation
 * (stop_alarm) {button} Order to stop alarm
         "I can do that right away" 
         The alarm stopped, your ears ache.
+        ~ alarm_ringing= false
+        
         ->questions
         
 * Ask about whereabouts
@@ -110,9 +117,40 @@ TODO voice explains situation
 * Ignore voice
 
 -Voice "Now follow my lead"
+Voice "This way"
+A door opens, silently sliding upwards
+A dark corridor lies beyond it
+-> The_Corridor
 -> END
 
 = alarm
  {button and not stop_alarm: The alarm makes it hard to understand the voice}
  ->->
  
+ === The_Corridor ===
+ The corrdior has no windows and apparently no artificial lights.
+ You would need something to see in the darkness.
+ You proceed using the weak lighting coming from the room you just left
+Voice "I detect your hydration level is critical"
+"No shit.."
+Voice "There are water supplies in teh crate on your left"
+"But I suggest you keep it for later and the rest of the crew"
+-> drink
+
+= drink
+hydration = {hydration}
+water supplies = {water_supplies}
+{water_supplies == 0: You finished your water supplies}
+
++   {hydration < 3 and water_supplies > 0} Drink one
+    ~ hydration = hydration +1
+    ~ water_supplies = water_supplies -1
+    ->drink
++   {hydration == 3 and water_supplies > 0} Drink another one 
+    You don't really feel like drinking anymore
+    ->enough_drinking
++   Don't drink
+    ->enough_drinking
+    
+= enough_drinking
+ -> END
