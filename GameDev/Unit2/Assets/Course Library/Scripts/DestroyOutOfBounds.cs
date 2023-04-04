@@ -30,6 +30,6 @@ public class DestroyOutOfBounds : MonoBehaviour
         else
         {
             //Nothing happens
-        }
+        }    
     }
 }
