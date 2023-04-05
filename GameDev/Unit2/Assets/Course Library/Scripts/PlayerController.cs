@@ -32,12 +32,13 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
-
+        
+        // Launch projectile from player position
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("Pressed!");
 
-            // Launch projectile from player position
+            
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
 
         }

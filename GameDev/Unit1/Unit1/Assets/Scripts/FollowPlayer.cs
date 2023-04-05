@@ -8,22 +8,24 @@ public class FollowPlayer : MonoBehaviour
     private Vector3 offset1 = new Vector3(0, 5, -7); //new because it creates a new object, a vector, which is an arrow
     private Vector3 offset2 = new Vector3(0, 2, 1);
     // Start is called before the first frame update
+
+    private SwitchCamera switchCamera;
      void Start()
     {
-        
+        switchCamera = GetComponent<SwitchCamera>();
     }
 
     // LateUpdate is called once per frame after every Update is called
     void LateUpdate()
     {
-        if (GameObject.Find("Main Camera").GetComponent<SwitchCamera>().cameraInside == false)
+        if (switchCamera.cameraInside)
         {
-            transform.position = player.transform.position + offset1;    
+            transform.position = player.transform.position + offset2;    
         }
 
         else
         {
-            transform.position = player.transform.position + offset2; 
+            transform.position = player.transform.position + offset1; 
         }
        
     }

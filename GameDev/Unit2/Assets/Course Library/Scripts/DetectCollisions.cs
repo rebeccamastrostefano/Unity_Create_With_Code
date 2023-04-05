@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchCamera : MonoBehaviour
+public class DetectCollisions : MonoBehaviour
 {
-    public bool cameraInside = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +13,13 @@ public class SwitchCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            cameraInside = !cameraInside;
-        }
+        
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        Destroy(other.gameObject);
+    }
+    
 }
