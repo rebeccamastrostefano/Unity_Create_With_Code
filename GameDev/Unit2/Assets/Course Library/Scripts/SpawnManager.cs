@@ -7,7 +7,10 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] animalPrefabs;
     //public int animalIndex;
     private float spawnRangeX = 15;
-    private float spawnPosZ = 20;
+    private float spawnPosTop = 20;
+    private float spawnRangeZ = 15;
+    private float spawnPosLeft = -30;
+    private float spawnPosRight = 30;
 
     private float startDelay = 2.0f;
     private float spawnInterval = 3.0f; 
@@ -16,24 +19,39 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         // call spawn function every time interval
-        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
+        InvokeRepeating("SpawnRandomAnimalTop", startDelay, spawnInterval);
+        InvokeRepeating("SpawnRandomAnimalLeft", startDelay, spawnInterval);
+        InvokeRepeating("SpawnRandomAnimalRight", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // if press S call spawn function
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SpawnRandomAnimal();
-        }
+
     }
 
     // Function to spawn random animal
-    void SpawnRandomAnimal()
+    void SpawnRandomAnimalTop()
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);
         float spawnPosX = Random.Range(-spawnRangeX, spawnRangeX);
-        Instantiate(animalPrefabs[animalIndex], new Vector3(spawnPosX, 0, spawnPosZ), animalPrefabs[animalIndex].transform.rotation);
+        Instantiate(animalPrefabs[animalIndex], new Vector3(spawnPosX, 0, spawnPosTop), Quaternion.Euler(0, 180, 0));
+    }
+
+    void SpawnRandomAnimalLeft()
+    {
+        SpawnRandomAnimalSides(-1);
+    }
+
+    void SpawnRandomAnimalRight()
+    {
+        SpawnRandomAnimalSides(1);
+    }
+
+    void SpawnRandomAnimalSides(int direction)
+    {
+        int animalIndex = Random.Range(0, animalPrefabs.Length);
+        float spawnPosZ = Random.Range(-spawnRangeZ, spawnRangeZ);
+        Instantiate(animalPrefabs[animalIndex], new Vector3(direction * spawnPosRight, 0, spawnPosZ), Quaternion.Euler(0, direction * -90, 0));
     }
 }
