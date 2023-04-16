@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectCollisions : MonoBehaviour
+public class GameOverWhenHit : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,14 +16,9 @@ public class DetectCollisions : MonoBehaviour
         
     }
 
-    //Destroy object when collides
     void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        Debug.Log("Game Over!");
         Destroy(other.gameObject);
     }
-
-    //Game over when hit by sides
-
-    
 }

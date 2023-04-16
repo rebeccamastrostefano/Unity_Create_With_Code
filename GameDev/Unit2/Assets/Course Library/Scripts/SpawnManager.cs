@@ -8,9 +8,9 @@ public class SpawnManager : MonoBehaviour
     //public int animalIndex;
     private float spawnRangeX = 15;
     private float spawnPosTop = 20;
-    private float spawnRangeZ = 15;
-    private float spawnPosLeft = -30;
-    private float spawnPosRight = 30;
+    private float spawnRangeZTop = 15;
+    private float spawnRangeZBottom = 1;
+    private float spawnPosSides = 30;
 
     private float startDelay = 2.0f;
     private float spawnInterval = 3.0f; 
@@ -51,7 +51,7 @@ public class SpawnManager : MonoBehaviour
     void SpawnRandomAnimalSides(int direction)
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);
-        float spawnPosZ = Random.Range(-spawnRangeZ, spawnRangeZ);
-        Instantiate(animalPrefabs[animalIndex], new Vector3(direction * spawnPosRight, 0, spawnPosZ), Quaternion.Euler(0, direction * -90, 0));
+        float spawnPosZ = Random.Range(spawnRangeZBottom, spawnRangeZTop);
+        Instantiate(animalPrefabs[animalIndex], new Vector3(direction * spawnPosSides, 0, spawnPosZ), Quaternion.Euler(0, direction * -90, 0));
     }
 }

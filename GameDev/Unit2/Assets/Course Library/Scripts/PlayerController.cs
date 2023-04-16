@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour
     public float verticalInput;
     public float speed = 10.0f;
     public float xRange = 10.0f;
-    public float zRange = 10.0f;
+    public float zRangetop = 10.0f;
+    public float zRangebottom = 0.0f;
+
     public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
@@ -38,14 +40,14 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        if (transform.position.z < -zRange) 
+        if (transform.position.z < -zRangebottom) 
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -zRange);
+            transform.position = new Vector3(transform.position.x, transform.position.y, -zRangebottom);
         }
         
-        if (transform.position.z > zRange) 
+        if (transform.position.z > zRangetop) 
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRangetop);
         }
 
         // Launch projectile from player position
