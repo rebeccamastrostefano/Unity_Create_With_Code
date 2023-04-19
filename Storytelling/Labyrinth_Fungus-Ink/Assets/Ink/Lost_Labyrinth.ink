@@ -294,19 +294,33 @@ You "Fucking Ethan, I'm gonna kill you when I find you
     -> Corridor
  
 = Living
-    {You push the door open | You enter the dark room again}
+    {You push the door open | You enter the living room again}
      #LIVING ROOM
     The room is slithly lit by a few candles that hang from the walls.
-    At the center of the room there's a couch, which looks surprisingly clean and tidy, differently from the rest of the house.
-    In front of it stands a fireplace, in it some burnt wood still crackles.
-    You "So it is the right place, but where did they go?
+    {At the center of the room there's a couch, which looks surprisingly clean and tidy, differently from the rest of the house.|}
+    {In front of it stands a fireplace, in it some burnt wood still crackles.|}
+    {You "So it is the right place, but where did they go?|}
     
-    To the other side of the room there's a door, your gut twirls when looking at it... but you don't know why...
-    
-    + Go to the door
+    {
+    -not From_dining:
+    To the other side of the room there's a door, your guts twirl when looking at it... but you don't know why...
+    +{not Dining_Door1 and not Dining_Door2}Go to the door
     -> Dining_Door1
-    + Go back
+    +{Dining_Door1 or Dining_Door2}Go in the dining room
+    -> Dining_Door1
+    +Go back
     -> Corridor
+    }
+    
+    {
+    -From_dining:
+    +Go in the corridor
+    ~ From_dining= false
+    -> Corridor
+    +Go back in the dining room
+    ~ From_dining= false
+    ->Dining_Door1
+    }
     
 VAR From_Hall= false
 VAR Enter_kitchen= false
@@ -315,10 +329,11 @@ VAR From_dining= false
 ~ From_Hall= false
 ~ From_dining= true
 {Wounded: you move slowly, the pain on your side is atrocious}
-    {You walk towards the door, arribed there, you open it.     You feel relieved when you notice the room doesn't seem to hide anything threatening. It looks like a dining room.|You are in the dining room}
+    {You walk towards the door, arrived there, you open it.     You feel relieved when you notice the room doesn't seem to hide anything threatening. It looks like a dining room.|You are in the dining room}
     #DINING ROOM
     There's a table in the center with six chairs around it. 
-    Like the living room the space is lit by some candles and it seems tidy and it feels like there was someone there minutes ago. Some food lies on the table, slightly eaten, but fresh.
+    {Like the living room the space is lit by some candles, it seems tidy and it feels like there was someone there minutes ago.|}
+    Some food lies on the table, slightly eaten, but fresh.
     To the other side of the room there's another door, and another one at the right.
     
     + Go to the door at the right
