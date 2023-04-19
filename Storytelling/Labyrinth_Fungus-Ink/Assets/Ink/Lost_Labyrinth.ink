@@ -95,9 +95,9 @@ VAR Wounded= false
 VAR Key_2= false
 VAR Grabbed_Leg= false
 You push down the door handle, and to your surprise the door is unlocked.
-The door slowly opens up, screeching louder and louder, until it's fully open.
+The door slowly opens up, screeching louder and louder, untill it's fully open.
 You go inside and a hallway stands before you, some lights slightly light up the room.
-You can see two doors at either dise of the corridor, and a bigger one right at the end in front of you.
+You can see two doors at either side of the corridor, and a bigger one right at the end in front of you.
 The door at your left is slightly open, while the two other ones stay closed shut.
 
 * Go to the door at your left
@@ -142,14 +142,15 @@ The door at your left is slightly open, while the two other ones stay closed shu
     You approach the small door that stands at your right, the floor screeches under your feet.
     {
     -not Closed_door: While walking the entrance door behind you suddenly closes, you get startled and the smashing sound echoes around you... 
-    - You "Fucking Ethan, I'm gonna kill you when I find you
+    You "Fucking Ethan, I'm gonna kill you when I find you
     }
     ~ Closed_door= true
-    Arrived at the door you{ try to open it, and it does. | open it}
-    The room is pitch black, you can't help but imagine what could lie in the darkness, the least rational thoughts make their way in your mind, and you start to shiver.
+    Arrived at the door you {try to open it, and it does. |open it}
+    The room is pitch black, you can't help but imagine what could lie in the darkness.
+    The least rational thoughts make their way in your mind, and you start to shiver.
     A smell comes from the room, it feels... humid
 
-    {Suddenly a noise, a sharp metallic sound. It sounded like a small object hitting the ground, then rolling away. It might be something that you moved when opening the door, or maybe not... | }
+    {Suddenly a noise, a sharp metallic sound. It sounds like a small object hitting the ground, then rolling away. It might be something that you moved when opening the door, or maybe not... | }
 
     * Feel for a light switch on the side of the door
     -> Light_library
@@ -163,7 +164,7 @@ The door at your left is slightly open, while the two other ones stay closed shu
     The lights turn on, your eyes slowly adjust to the sudden brightness.
     When you can finally see clearly again you notice that the room appears safe, even if shabby.
     
-    It's a library room, lots of old books are on the big shelves, old books, you now understand that the smell you felt was the moldy paper.
+    It's a library room, lots of old books are on the big shelves... old books, you now understand that the smell you felt was the moldy paper.
     
     No one is in here, it's just a fairly empty and small room.
     
@@ -175,7 +176,8 @@ The door at your left is slightly open, while the two other ones stay closed shu
 = Library  
     #LIBRARY
     {Wounded: you move slowly, the pain on your side is atrocious}
-    You walk inside the small room, you suddenly step on something. Looking down you see it's a bolt. It's probably what fell on the ground earlier. You feel relieved.
+    You walk inside the small room, you suddenly step on something. 
+    Looking down you see it's a bolt. It's probably what fell on the ground earlier. You feel relieved.
     
     You look at the books on the shelves, they are dusty, and the smell is now annoying you.
     At some point you realize one of the books seems newer, less dusty... it definetely stands out.
@@ -212,7 +214,7 @@ The door at your left is slightly open, while the two other ones stay closed shu
  You look around a little more, but there is not much else that seems interesting.
  Suddenly something grabs your leg and you fall to the ground
  You quickly look around and can only see a small shadow moving fast through the door
- You "What the hell was that? Fucking Ethan, if this is a prank...". 
+ You "What the hell was that? Fucking Ethan, if this is a prank... 
  You get up.
   ~ Grabbed_Leg= true
  + Keep Looking
@@ -221,7 +223,7 @@ The door at your left is slightly open, while the two other ones stay closed shu
  -> Corridor
  
 = Nothing_Here
- {...the room is quiet | You "I should probably go somewhere else}
+ {There's nothing else that gets your attention.| ...the room is quiet | You "I should probably go somewhere else}
  + Keep Looking
  -> Nothing_Here
  + Go out
@@ -232,7 +234,7 @@ The door at your left is slightly open, while the two other ones stay closed shu
 {Wounded: you move slowly, the pain on your side is atrocious}
     {
     -not Closed_door: While walking the door entrance behind you suddenly closes, you get startled and the smashing sound echoes around you... 
-    -You "Fucking Ethan, I'm gonna kill you when I find you
+    You "Fucking Ethan, I'm gonna kill you when I find you
     }
     ~ Closed_door= true
     {not Slither_sounds: You can hear sinister sounds around you, but you can't quite figure out their source... it sounds like something slithering slowly around, maybe water, maybe some creature?} 
@@ -281,7 +283,7 @@ The door at your left is slightly open, while the two other ones stay closed shu
 {Wounded: you move slowly, the pain on your side is atrocious}
 {
 -not Closed_door: While walking the door entrance behind you suddenly closes, you get startled and the smashing sound echoes around you... 
--You "Fucking Ethan, I'm gonna kill you when I find you
+You "Fucking Ethan, I'm gonna kill you when I find you
 }
     ~ Closed_door= true
     You approach the door that stands at your left, it's slightly open.
@@ -313,7 +315,7 @@ VAR From_dining= false
 ~ From_Hall= false
 ~ From_dining= true
 {Wounded: you move slowly, the pain on your side is atrocious}
-    {You walk towards the door, the floor screeches under your feet, and that weird feeling in your guts gets worse at every step. Arrived in front of the door, you open it. You feel relieved when you notice the room doesn't seem to hide anything threatening. It looks like a dining room. | You are in the dining room}
+    {You walk towards the door, arribed there, you open it.     You feel relieved when you notice the room doesn't seem to hide anything threatening. It looks like a dining room.|You are in the dining room}
     #DINING ROOM
     There's a table in the center with six chairs around it. 
     Like the living room the space is lit by some candles and it seems tidy and it feels like there was someone there minutes ago. Some food lies on the table, slightly eaten, but fresh.
