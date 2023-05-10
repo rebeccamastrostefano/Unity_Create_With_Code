@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         //move player forward
         playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
         //set powerup indicator on top of player
-        powerupIndicator.transform.position = transform.position + new Vector3(0, 2, 0);
+        powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
     }
     private void OnTriggerEnter(Collider other) 
     {

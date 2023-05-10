@@ -9,12 +9,23 @@ public class SpawnManager : MonoBehaviour
 
     //set spwan range in which enemy can spawn
     private float spawnRange = 9.0f;
+
+    public int enemyCount;
+
     // Start is called before the first frame update
     void Start()
     {
-        //create enemy
-        Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+        SpawnEnemyWave(3);
     }
+
+    void SpawnEnemyWave(int enemiesToSpawn)
+    {
+        for (int i = 0; i < enemiesToSpawn; i++)
+        {
+            Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+        }
+    }
+
     private Vector3 GenerateSpawnPosition()
     {
         //get the spwan pos in a random range of numbers
@@ -28,6 +39,11 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        enemyCount = FindObjectsOfType<Enemy>().Length;
         
+        if (enemyCount == 0)
+        {
+            SpawnEnemyWave(1);
+        }
     }
 }
