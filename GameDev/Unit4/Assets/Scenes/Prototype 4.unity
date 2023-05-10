@@ -567,7 +567,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
@@ -692,6 +692,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8878a37eb67ddac4ead51890a31d6a18, type: 3}
+--- !u!1 &1861188066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6271357279748268331, guid: 1ca445d05826a1640be101360095dc6f, type: 3}
+  m_PrefabInstance: {fileID: 3751968549064921264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1861188071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861188066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9524350783e5b74ab4ca51c56b19608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 2
 --- !u!1001 &1932025868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -755,7 +773,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4981602823782863345, guid: 1ca445d05826a1640be101360095dc6f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ca445d05826a1640be101360095dc6f, type: 3}
 --- !u!1001 &3751968549064921264
 PrefabInstance:

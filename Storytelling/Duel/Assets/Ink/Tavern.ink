@@ -11,6 +11,8 @@ Jenny rushes out of the tavern. Ivor is fuming, as he gets up, he smashes the ch
 -> 1_A
 
 ===1_A===
+#wait
+#next
 A few days have passed and you never saw Jenny after that time.
 The siuation is strange, maybe Ivor did something, this must be investigated.
 
