@@ -22,12 +22,15 @@ public class PlayerController : MonoBehaviour
     //powerup indicator
     public GameObject powerupIndicator;
 
+    private GameObject gameOver;
+
     // Start is called before the first frame update
     void Start()
     {
         //Get the rigidbody and the focal point object
         playerRb = GetComponent<Rigidbody>();
         focalPoint = GameObject.Find("Focal Point");
+        gameOver = GameObject.Find("Game Over");
     }
 
     // Update is called once per frame
@@ -39,11 +42,18 @@ public class PlayerController : MonoBehaviour
         playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
         //set powerup indicator on top of player
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
+
+        if (transform.position.y < -10)
+        {
+            Debug.Log("Game Over!");
+            Destroy(gameObject);
+            gameOver.gameObject.SetActive(true);
+        }
     }
     private void OnTriggerEnter(Collider other) 
     {
         //check if powerup has collided with player
-        if (other.CompareTag("Powerup"))
+        if (!hasPowerup && other.CompareTag("Powerup"))
         {
             //set powerup to true
             hasPowerup = true;
