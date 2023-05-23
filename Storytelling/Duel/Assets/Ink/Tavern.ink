@@ -10,7 +10,7 @@ Jenny "I'm done with you!
 Jenny rushes out of the tavern. Ivor is fuming, as he gets up, he smashes the chair on the ground, then follows Jenny outside.
 -> 1_A
 
-===1_A===
+=1_A
 #wait
 #next
 A few days have passed and you never saw Jenny after that time.
@@ -19,19 +19,44 @@ The siuation is strange, maybe Ivor did something, this must be investigated.
 Ivor comes at the counter.
 Ivor "Give me a drink please.
 He looks like he hasn't slept in ages and he also seems pissed.
-You "Coming right up.
+    * Coming right up
+    You "Coming right up.
+    -> drinks
+    * Just a moment
+    You "Just a moment.
+    -> drinks
 
-You pour the usual liquor Ivor drinks into a glass, put some ice, then serve it to him.
-
-He starts to drink.
-
+=== drinks ===
+    *@Good_Drink
+    ->1_A_Good
+    *@Bad_Drink
+    ->1_A_Bad
+    
+    
+===1_A_Good===
+    You serve the cup.
+    He starts to drink.
+    Ivor "Thank you.
+    
+    *@talk
+    -> talk
+    
+===1_A_Bad===    
+    You serve the cup.
+    He starts to drink.
+    Ivor "This thing sucks... anyway anything will do...
+    
+    *@talk
+    -> talk
+    
+===talk===
     * Heard you and Jenny are having some problems...
     You "I've heard you and Jenny are having some problems, is everything ok?
     ~ Points = Points - 1
     -> 2_B
     *Is Jenny ok?
     You "Is Jenny ok? She hasn't come in a while...
-     ~ Points = Points + 1
+    ~ Points = Points + 1
     -> 2_A
 
 = 2_A
