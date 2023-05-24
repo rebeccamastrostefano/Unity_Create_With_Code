@@ -20,10 +20,10 @@ Ivor comes at the counter.
 Ivor "Give me a drink please.
 He looks like he hasn't slept in ages and he also seems pissed.
     * Coming right up
-    You "Coming right up.
+    You "Coming right up.#pause
     -> drinks
     * Just a moment
-    You "Just a moment.
+    You "Just a moment. #pause
     -> drinks
 
 === drinks ===
