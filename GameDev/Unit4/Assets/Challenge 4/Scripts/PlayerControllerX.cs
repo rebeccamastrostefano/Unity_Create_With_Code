@@ -16,6 +16,8 @@ public class PlayerControllerX : MonoBehaviour
 
     private float normalStrength = 10; // how hard to hit enemy without powerup
     private float powerupStrength = 25; // how hard to hit enemy with powerup
+
+    public ParticleSystem boostParticle;
     
     void Start()
     {
@@ -31,10 +33,12 @@ public class PlayerControllerX : MonoBehaviour
 
         // Set powerup indicator position to beneath player
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.6f, 0);
+        boostParticle.transform.position = transform.position + new Vector3(0, -0.5f, 0);
 
         if(Input.GetKey(KeyCode.Space))
         {
             Boost();
+            
         }
         else
         {
@@ -46,6 +50,7 @@ public class PlayerControllerX : MonoBehaviour
     void Boost()
     {
         speed= moreSpeed;
+        boostParticle.Play();
     }
 
     void unBoost()
