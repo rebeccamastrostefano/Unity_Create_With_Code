@@ -15,12 +15,21 @@ public class GameManager : MonoBehaviour
     private float spawnRate = 1.0f;
     public Button restartButton;
 
+    private GameObject titleScreen;
+
     // Start is called before the first frame update
     void Start()
     {
+        titleScreen= GameObject.Find("Title Screen");
+    }
+
+    public void StartGame(int difficulty)
+    {
+        spawnRate /= difficulty;
         StartCoroutine(SpawnTarget());
         UpdateScore(0);
-        isGameOver=false;
+        isGameOver=false; 
+        titleScreen.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
