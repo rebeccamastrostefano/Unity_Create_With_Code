@@ -11,7 +11,8 @@ public class GameManagerX : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI gameOverText;
     public GameObject titleScreen;
-    public Button restartButton; 
+    public Button restartButton;
+    private float currentTime; 
 
     public List<GameObject> targetPrefabs;
 
@@ -32,7 +33,21 @@ public class GameManagerX : MonoBehaviour
         score = 0;
         UpdateScore(0);
         titleScreen.SetActive(false);
-        StartTimer();
+        currentTime = 60;
+    }
+
+    public void Update()
+    {
+        if(isGameActive)
+        {
+            currentTime -= Time.deltaTime;
+            timerText.text = ("Timer: " + Mathf.Round(currentTime));
+        }
+
+        if(currentTime < 0)
+        {
+            GameOver();
+        }
     }
 
     // While game is active spawn a random target
@@ -51,14 +66,6 @@ public class GameManagerX : MonoBehaviour
         }
     }
 
-    IEnumerator StartTimer()
-    {
-        for(int i= 60; i == 0; i--)
-        {
-            yield return new WaitForSeconds(1);
-            timerText.text = "Timer: " + i;
-        }
-    }
 
     // Generate a random spawn position based on a random index from 0 to 3
     Vector3 RandomSpawnPosition()
