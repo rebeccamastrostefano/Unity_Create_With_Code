@@ -7,6 +7,7 @@ VAR rightTopping = "Veggies"
 You are cleaning the last few dirty glasses left from last night,
 You already tidied up the whole tavern as well as you could, and customers should start to come in in minutes. 
 #door
+
 As you are drying the last glass you hear the door open, it's Charlie, he always comes to your place when he gets off work. 
 Charlie sits at the counter. #charlieright #charlietired
 
