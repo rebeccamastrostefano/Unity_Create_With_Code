@@ -66,6 +66,20 @@ public class GameManagerX : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    IEnumerator StartTimer()
+    {
+        for(int i= 60; i < 0; i--)
+        {
+            yield return new WaitForSeconds(1);
+            timerText.text = "Timer: " + i;
+        }
+    }
+=======
+>>>>>>> b2f420d237ba5d245ffd341a1f89c830f6fdd8af
+>>>>>>> Stashed changes
 
     // Generate a random spawn position based on a random index from 0 to 3
     Vector3 RandomSpawnPosition()
