@@ -4,6 +4,7 @@ TODO Vicky comes in, you set up a wall to gather clues in teh back. Vicky tells 
 TODO Max comes in, the peacock shares his recent increase in sales, his vanity is particularly high today. 
 TODO The agent leaves. Vicky boldly asks Max about the crimes, he seems really nervous around the matter, but also Vicky is suspicious, she talks way too boldly, as if she's tring to throw away attention from her. He goes away, son later also does she.
 #fade
+#clues
 #wait
 plop
 

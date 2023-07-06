@@ -186,6 +186,7 @@ Four customers and only one drink... what a day...
 You think that Samantha was right, they are always arguing, and Olivia seems the abused one here.
 You decide to keep track of all the weird happening from now on 
 It could be nothing... but your guts is telling you otherwise, something's off here
+#clues
 #endday
 *@close
 ->DayTwo
