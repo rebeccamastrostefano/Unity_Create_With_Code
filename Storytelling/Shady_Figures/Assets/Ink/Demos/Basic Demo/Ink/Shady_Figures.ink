@@ -4,7 +4,7 @@ INCLUDE Storytelling\DayTwo.ink
 INCLUDE Storytelling/DayFour.ink
 
 
-->finishday1
+->DayOne
 === DayOne ===
 VAR rightDrink = "Carrot"
 VAR rightTopping = "Veggies"
@@ -15,6 +15,7 @@ VAR max = false
 VAR shadyfigure = false
 VAR oliviadisappear = "none"
 #fade
+#wait
 #dayone
 You are cleaning the last few dirty glasses left from last night,
 You already tidied up the whole tavern as well as you could, and customers should start to come in in minutes. 

@@ -8,6 +8,7 @@ VAR Points = 0
 ===1_A===
 #daythree
 #fade
+#wait
 A few days have passed.
 #door
 Spike comes at the counter. #spiketired #spikeright
