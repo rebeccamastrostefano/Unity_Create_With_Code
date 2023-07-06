@@ -1,5 +1,4 @@
 ===DayFour===
-->END
 #fade
 #dayfour
 

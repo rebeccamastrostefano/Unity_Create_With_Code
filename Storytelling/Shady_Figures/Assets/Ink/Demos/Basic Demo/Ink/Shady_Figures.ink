@@ -4,7 +4,7 @@ INCLUDE Storytelling\DayTwo.ink
 INCLUDE Storytelling/DayFour.ink
 
 
-->DayOne
+->finishday1
 === DayOne ===
 VAR rightDrink = "Carrot"
 VAR rightTopping = "Veggies"
@@ -157,7 +157,7 @@ Samantha "Poor bunny, delivery drivers always get the hate for stuff, I'm sorry
     ~ crimes = "g"
     ->finishday1
     
-=finishday1
+===finishday1===
 Samantha gets up to leave, she seems in a rush
 Charlie "Already going? Not even a drink?
 Samantha "Just wanted to say hi, bye Charlie, bye Hiro 
