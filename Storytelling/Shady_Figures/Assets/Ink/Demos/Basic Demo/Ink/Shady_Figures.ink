@@ -8,17 +8,20 @@ INCLUDE Storytelling/DayFour.ink
 === DayOne ===
 VAR rightDrink = "Carrot"
 VAR rightTopping = "Veggies"
-VAR spikedelivery = "none"
-VAR crimes = "none"
+VAR spikedelivery = ""
+VAR crimes = ""
 VAR charliesampack = false
 VAR max = false
 VAR shadyfigure = false
-VAR oliviadisappear = "none"
+VAR oliviadisappear = ""
 #fade
 #wait
 #dayone
-You are cleaning the last few dirty glasses left from last night,
-You already tidied up the whole tavern as well as you could, and customers should start to come in in minutes. 
+You cleaned the last few dirty glasses left from last night,
+You already tidied up the whole tavern as well as you could, and you can open up now. 
+#open
+#wait
+People should start to come in soon
 #door
 
 As you are drying the last glass you hear the door open, it's Charlie, he always comes to your place when he gets off work. 
@@ -97,8 +100,10 @@ Charlie looks like he wants to talk now, a few sips of liquor and his good mood 
 Charlie "Yah, sometimes he also does other jobs there, takes care of cleaning, takes care of tickets... 
 Charlie "or sometimes he takes care of packages arriving
 #charlieangry
-Charlie "And today he really had something to say about it... he complained for an hour about how the packages needed to be 6, not 5. What am I supposed to do about it? I just deliver
-Charlie "So then of course the boss got upset with the fact that I was losing time with that idiot. Spike even snapped at me, I was scared he was about to punch me. Such a big fuss for a package.
+Charlie "And today he really had something to say about it... 
+Charlie "He complained for an hour about how the packages needed to be 6, not 5. What am I supposed to do about it? I just deliver
+Charlie "So then of course the boss got upset with the fact that I was losing time with that idiot. 
+Charlie "Spike even snapped at me, I was scared he was about to punch me. Such a big fuss for a package.
 This story seems odd, you know Spike can be arrogant, but he doesn't really care about doing his job right...
 ~ spikedelivery = "b"
 
@@ -112,6 +117,7 @@ This story seems odd, you know Spike can be arrogant, but he doesn't really care
     ->Samantha
     
 =Deliver
+#charlienormal
 You "What did you deliver to him?
 Charlie "I have no idea, I'm not supposed to know the content of packages, I just kow it was real heavy
 Charlie "And that's odd, usually the packages for the night club are quite light, probably some cups or napkins...
@@ -186,9 +192,9 @@ Four customers and only one drink... what a day...
 You think that Samantha was right, they are always arguing, and Olivia seems the abused one here.
 You decide to keep track of all the weird happening from now on 
 It could be nothing... but your guts is telling you otherwise, something's off here
-#clues
 #endday
 *@close
+#wait
 ->DayTwo
 
     

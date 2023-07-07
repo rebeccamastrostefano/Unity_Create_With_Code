@@ -7,9 +7,13 @@ VAR Points = 0
 
 ===1_A===
 #daythree
+#clues
 #fade
 #wait
-A few days have passed.
+You have new clues about the whole matter, yesterday was quite a good progress in your research.
+#open
+#wait
+You are ready to open the tavern, hoping to get even more info.
 #door
 Spike comes at the counter. #spiketired #spikeright
 You realize that you never saw Olivia after that time when they fought.
@@ -192,6 +196,7 @@ Spike continues to cry over his glass...
 The night is quiet today, it looks like no one else is coming, which also adds to the whole situation.
 You are puzzled by the information you got in the last few days...
 You need time to think it through
+#clues
 #endday
 *@close
 -> DayFour
