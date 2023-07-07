@@ -7,9 +7,9 @@ VAR Points = 0
 
 ===1_A===
 #daythree
-#clues
 #fade
 #wait
+#clues
 You have new clues about the whole matter, yesterday was quite a good progress in your research.
 #open
 #wait

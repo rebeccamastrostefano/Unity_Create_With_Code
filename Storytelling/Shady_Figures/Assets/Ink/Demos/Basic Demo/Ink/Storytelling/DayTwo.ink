@@ -1,11 +1,11 @@
 ===DayTwo===
 #daytwo
 #fade
-#clues
 #wait
 VAR VickyPoints = 0
 It's a new evening at work, you spent the afternoon setting up a wall to keep clues in the back.
 You decided that you will use it to keep track of what you discover about the whole matter.
+#clues
 #open
 #wait
 You are still wondering about this whole situation. Crimes, weird behaviors, everything is weird.
@@ -187,7 +187,7 @@ Vicky "Hm... ok birdy...
 Max "I have to go now
 Max gets up and leaves, after paying you for the drink #maxout #door #maxnormal
 ~ max = true
-You and Vicky share a look of agreement, now words are needed.
+You and Vicky share a look of agreement, no words are needed.
 Vicky "I'll go too
 She also gets up, gives you a tip and leaves #door #vickyout
 

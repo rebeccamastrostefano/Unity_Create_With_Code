@@ -194,7 +194,6 @@ You decide to keep track of all the weird happening from now on
 It could be nothing... but your guts is telling you otherwise, something's off here
 #endday
 *@close
-#wait
 ->DayTwo
 
     
